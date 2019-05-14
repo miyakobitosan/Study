@@ -1,0 +1,30 @@
+\documentclass{jsarticle}
+\usepackage{amsmath,amssymb}
+\usepackage{amsthm}
+%\usepackage{pdfpages}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{color}
+%\usepackage{mediabb}
+\theoremstyle{definition}
+\newtheorem{theorem}{定理}
+\newtheorem{definition}[theorem]{定義}
+\newtheorem{lemma}[theorem]{補題}
+\renewcommand\proofname{\bf 証明}
+\begin{document}
+\section{Shor's algorithm}
+\subsection{アルゴリズムの目標}
+$M \in \mathbb{Z}_{>0}$に対して, 次の$2$つの条件を満たす函数$f:\mathbb{N}\rightarrow \{0, M-1 \}$を考える.\\
+【条件】\\
+$1.$ 周期 $^{\exists !}r$	$($i.e$)$ for $^{\forall} x \in \mathbb{N}, $ $f(x+r)=f(x)$\\
+$2.$ $f(0), \cdots , f(r-1)$ are all distinct. 
+
+\subsection{アルゴリズムの戦略}
+まず, 記号の準備をする. for $a \in \mathbb{N}$, let $f_a:\mathbb{N}\rightarrow \{ 0, \cdots , M-1 \} , x\mapsto a^x \mod M.$ \\
+$1.$ $M ( n$  bit $)$ の整数,  $a \in \{1, M-1 \}$ を gcd $(a, M)=1$を満たす整数とする.\\
+$2.$ 等重の並列状態にする. $\frac{1}{\sqrt{Q} } \displaystyle\sum_{x}^{Q-1}  |x  \rangle$ \\
+$3.$ Quantum part and measure. \\
+$4.$ 周期$r$を$3.$で得た$x$から推定する. $x$が "good number " なら, $r$を推測できる. そうでなければ,再度$3$に戻る.\\
+
+ 
+
+\end{document}
