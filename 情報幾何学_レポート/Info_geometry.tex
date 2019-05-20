@@ -1,0 +1,43 @@
+\documentclass{jsarticle}
+\usepackage{amsmath,amssymb}
+\usepackage{amsthm}
+%\usepackage{pdfpages}
+%\usepackage{mediabb}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{color}
+%\usepackage{mediabb}
+\theoremstyle{definition}
+\newtheorem{theorem}{定理}
+\newtheorem{definition}[theorem]{定義}
+\newtheorem{lemma}[theorem]{補題}
+\renewcommand\proofname{\bf 証明}
+\newtheorem{problem}[theorem]{問題}
+\begin{document}
+\section{準備:幾何学}
+\begin{definition}
+Let $X$  be a set. A topology on $X$ is a collection of subsets of $X$, such that:\\
+$(1)$ the empty set $\phi$ and the set $X$ are open;\\
+$(2)$ the union of an arbitrary collection of open sets is open;\\
+$(3)$ the intersection of a finite number of open sets is open.
+\end{definition}
+\begin{problem}
+Xの部分集合族$\mathcal{O}$を用いて、上記の位相空間の定義を書き直せ.
+\end{problem}
+\begin{definition}
+位相空間$M$が次の条件$(1), (2)$を満足する時, $M$を$m$ dimensional topological manifoldという.\\
+$(1)$ $M$ is Hausdorff space.\\
+$(2)$ For $^{\forall} p\in M$  $m$ 次元座標近傍$(U, \varphi)$ が存在する.
+\end{definition}
+\begin{definition}
+Given any $C^k$ manifold $M$, of dimension $n$, with $k \geq 1$, for any $p\in M$ , a tangent vector to $M$ at $p$ is any equivalence class of $C^1$ curves through $p$ on $M$, modulo the equivalence relation defined in below.
+\begin{equation}
+\gamma_1:(-\epsilon _1, \epsilon_1 ) \rightarrow M  \gamma_2:(-\epsilon _2, \epsilon_2 ) \rightarrow M \text{ are equivalent } \Leftrightarrow ^\exists (U, \varphi ) \text{  s.t } \frac{d(\varphi \circ \gamma_1)}{dt} (0)=\frac{d(\varphi \circ \gamma_2)}{dt} (0)
+\end{equation}
+\end{definition}
+次に逆写像定理が重要となる.
+\begin{theorem}
+$M,N$を$C^r$級多様体, $f:M\rightarrow N$ を$C^r$級写像とする.
+$(df)_p:T_p(M)\overset{\sim}{\longrightarrow }T_{f(p)}N $なら, $p \in ^\exists U, f(p) \in ^\exists V $ s.t $f|U:U\overset{\sim}{\longrightarrow}V.$
+\end{theorem}
+
+\end{document}
