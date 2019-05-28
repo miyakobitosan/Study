@@ -39,5 +39,43 @@ Given any $C^k$ manifold $M$, of dimension $n$, with $k \geq 1$, for any $p\in M
 $M,N$を$C^r$級多様体, $f:M\rightarrow N$ を$C^r$級写像とする.
 $(df)_p:T_p(M)\overset{\sim}{\longrightarrow }T_{f(p)}N $なら, $p \in ^\exists U, f(p) \in ^\exists V $ s.t $f|U:U\overset{\sim}{\longrightarrow}V.$
 \end{theorem}
+\newpage
+\section{取り組み}
+今回の量子カーネルSVMについて、どのようなことが背景にあって、問題点、改善の方法と検討結果について考察していく予定である. \\
+1. SVM\\
+	何を解くか。どう解くか。\\
+2. カーネルSVM\\
+	既存研究の問題点の調査.\\
+	カーネルを用いることの利点\\
+	課題\\
+3. 量子カーネルSVM\\
+	何を解く問題か。\\
+	どう解くか。\\
+4. 自然勾配法\\
+	何を解く方法か、どう解く方法か。\\
+	課題は何か\\
+5. 量子カーネルSVMへの適用
+\newpage
+\subsection{SVM:サポートベクターマシンについて}
+\subsubsection{パーセプトロン}
+\subsubsection{SVMの概略}
+分類問題を解くアルゴリズムとして、SVM(Support Vector Machine)があげられる. SVMは, パーセプトロンの拡張であり、マージンを最適化することを目的とする. ここでマージンを最適化（ここではマージンの最適化はマージンの最大化を意味することにする.）するとは, それぞれのクラスに属する点群のうち, 直線に一番近い点と直線の距離を考え, その距離を最大化することである.\\
+簡単のため, $2$次元の時の点$(x_0, y_0)$と直線$y=a\cdot x +w_0 $の距離について述べる.
+\begin{align}
+\frac{ \| a\cdot x_0 - y_0+ w_0  \| }{\sqrt{a^2+1 }} 
+\end{align}
+ここで, $\mathbf{w}:=(a,-1), \mathbf{x}_0 :=(x_0, y_0) $とした時, 
+\begin{align}
+\frac{ \| w_0+  \mathbf{w} \cdot \mathbf{x}_0  \| }{\|\mathbf{w} \|}
+\end{align}
+
+\subsubsection{研究：Karush-Kuhn-Tucker条件について}
+*参考文献：機械学習のエッセンス pp260
+\subsection{コーディング}
+\subsubsection{文献}
+$\bullet$ pp76から :達人データサイエンティストによる理論と実践:Python 機械学習プログラミング. \\
+$\bullet$ 機械学習のエッセンス.
+
+
 
 \end{document}
